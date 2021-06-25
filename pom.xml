@@ -15,15 +15,15 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.4.2</version>
+        <version>2.5.1</version>
     </parent>
 
     <properties>
         <jar.finalName>elide-spring-boot</jar.finalName>
         <postgres.version>42.2.7</postgres.version>
         <liquibase.version>3.8.1</liquibase.version>
-        <elide.version>5.0.1</elide.version>
-        <spring.version>2.4.2</spring.version>
+        <elide.version>5.0.4</elide.version>
+        <spring.version>2.5.1</spring.version>
         <junit.jupiter.version>5.5.2</junit.jupiter.version>
     </properties>
 
@@ -46,11 +46,14 @@
             <groupId>com.yahoo.elide</groupId>
             <artifactId>elide-spring-boot-starter</artifactId>
             <version>${elide.version}</version>
-            <!-- Remove Tomcat -->
             <exclusions>
                 <exclusion>
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.yahoo.elide</groupId>
+                    <artifactId>elide-graphql</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
