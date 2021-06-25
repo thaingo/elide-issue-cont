@@ -11,7 +11,7 @@ elide:
     enabled: true
   graphql:
     path: /graphql/api/v1
-    enabled: true
+    enabled: false
   swagger:
     path: /doc
     enabled: true
@@ -25,12 +25,12 @@ elide:
     export:
       enabled: false
   aggregation-store:
-    enabled: true
+    enabled: false
     default-dialect: h2
     enableMetaDataStore: false
   dynamic-config:
     path: src/main/resources/analytics
-    enabled: true
+    enabled: false
 
 spring:
   application:
@@ -46,6 +46,7 @@ spring:
       dialect: 'org.hibernate.dialect.H2Dialect'
       jdbc:
         use_scrollable_resultset: true
+      ddl-auto: update
   datasource:
     url: 'jdbc:h2:mem:db1;DB_CLOSE_DELAY=-1'
     username: 'sa'
@@ -59,12 +60,11 @@ server:
   tomcat:
     max-threads: 2
 
-logging:
-  path: /tmp
-
 security:
   origin: "*"
-
+logging:
+  file:
+    path: /tmp
 ---
 elide:
   aggregation-store:
