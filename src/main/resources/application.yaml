@@ -64,7 +64,7 @@ security:
   origin: "*"
 logging:
   file:
-    path: /tmp
+    path: ../log
 ---
 elide:
   aggregation-store:
