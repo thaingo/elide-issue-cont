@@ -11,11 +11,9 @@ import javax.persistence.Id;
 @Include
 @Getter
 @Setter
-public class Entity1 extends BaseEntity implements HasOwner {
+public class Entity1 extends BaseEntity {
 
     @Id
     private String id;
-
-    private String owner;
 
 }

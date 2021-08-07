@@ -9,20 +9,15 @@ import javax.persistence.Id;
 
 @Entity
 @Include
-public class Entity2 extends BaseEntity implements HasOwner, HasXyz, HasAbc {
+public class Entity2 extends BaseEntity implements HasXyz, HasAbc {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private String owner;
     private String xyz;
     private String abc;
 
-    @Override
-    public String getOwner() {
-        return this.owner;
-    }
 
     @Override
     public String getXyz() {
@@ -35,10 +30,6 @@ public class Entity2 extends BaseEntity implements HasOwner, HasXyz, HasAbc {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public void setOwner(String owner) {
-        this.owner = owner;
     }
 
     public void setXyz(String creator) {
