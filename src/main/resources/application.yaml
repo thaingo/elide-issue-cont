@@ -16,21 +16,21 @@ elide:
     path: /doc
     enabled: true
   async:
-    enabled: false
+    enabled: true
     threadPoolSize: 2
     maxRunTime: 65
     cleanupEnabled: true
     queryCleanupDays: 7
     defaultAsyncQueryDAO: true
     export:
-      enabled: false
+      enabled: true
   aggregation-store:
-    enabled: false
+    enabled: true
     default-dialect: h2
     enableMetaDataStore: false
   dynamic-config:
     path: src/main/resources/analytics
-    enabled: false
+    enabled: true
 
 spring:
   application:
@@ -57,14 +57,12 @@ spring:
     enabled: true
 server:
   port: 8080
-  tomcat:
-    max-threads: 2
 
 security:
   origin: "*"
 logging:
   file:
-    path: ../log
+    path: ./log
 ---
 elide:
   aggregation-store:
