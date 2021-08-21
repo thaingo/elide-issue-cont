@@ -9,12 +9,6 @@
         '''
         joins: [
             {
-                name: artifactGroup
-                to: group
-                kind: toOne
-                definition: '{{$group_id}} = {{artifactGroup.$name}}'
-            },
-            {
                 name: artifactProduct
                 to: product
                 kind: toOne
@@ -22,11 +16,6 @@
             }
         ]
         dimensions: [
-            {
-                name: group
-                type: TEXT
-                definition: '{{artifactGroup.name}}'
-            }
             {
                 name: product
                 type: TEXT
