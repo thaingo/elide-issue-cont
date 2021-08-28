@@ -29,8 +29,7 @@ elide:
     default-dialect: h2
     enableMetaDataStore: false
   dynamic-config:
-    path: /Users/thai.ngo/Documents/mine/elide-issue/ba
-    enabled: true
+    enabled: false
 
 spring:
   application:
