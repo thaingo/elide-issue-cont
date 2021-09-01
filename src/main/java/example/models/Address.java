@@ -1,15 +1,11 @@
 package example.models;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.Data;
 
 import javax.persistence.Embeddable;
 
-@Getter
-@Setter
 @Embeddable
-@ToString
+@Data
 public class Address {
 
     private String city;
