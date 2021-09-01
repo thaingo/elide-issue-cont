@@ -95,8 +95,8 @@ class SampleTest extends IntegrationTest {
         final Map<String, String> addressValue1 = new LinkedHashMap<>();
         addressValue1.put("city", "Saigon");
         final Map<String, String> addressValue2 = new LinkedHashMap<>();
-        addressValue1.put("city", "Saigon");
-        addressValue1.put("country", "VN");
+        addressValue2.put("city", "Saigon");
+        addressValue2.put("country", "VN");
         given()
                 .contentType(JsonApiController.JSON_API_CONTENT_TYPE)
                 .body(
